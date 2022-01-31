@@ -1,0 +1,47 @@
+<!--suppress HtmlFormInputWithoutLabel -->
+<app-head></app-head>
+<body>
+  <div class="sign_out">
+    <h5> username </h5>
+    <p-button routerLink="/auth" > Выйти </p-button>
+  </div>
+  <div class="block">
+
+    <div class="block__container " >
+      <app-table></app-table>
+    </div>
+
+    <div class="block__container" >
+
+      <form [formGroup]="pointForm">
+        <div class="value">
+          <label >X</label>
+          <p-multiSelect class="input" [options]="xValues" formControlName="x"  defaultLabel="Укажите X"></p-multiSelect>
+
+        </div>
+
+        <div class="value">
+          <label>Y</label>
+          <input class="input" formControlName="y" type="text" pInputText />
+        </div>
+        <div class="value">
+          <label >R</label>
+          <p-multiSelect class="input"  [options]="rValues" formControlName="r" defaultLabel="Укажите R"></p-multiSelect>
+        </div>
+        <div class="buttons">
+          <p-button id="submit" (click)="submitHit(pointForm.value)" >тык</p-button>
+        </div>
+
+
+      </form>
+
+
+    </div>
+  </div>
+
+
+
+
+</body>
+
+

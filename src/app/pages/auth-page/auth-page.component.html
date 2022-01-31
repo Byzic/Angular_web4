@@ -1,0 +1,38 @@
+<app-head></app-head>
+<body>
+
+
+
+    <div class="container " style=" margin:15%">
+    <p-card class="auth_card"  >
+
+        <form [formGroup]="authForm">
+          <h4>Авторизуйтесь</h4>
+
+          <div class="field">
+            <label for="login" style="margin: 5px">Логин</label>
+            <input formControlName="username" id="login" type="text" pInputText />
+          </div>
+          <div class="field">
+            <label for="password" style="margin: 5px">Пароль</label>
+            <input formControlName="password" id="password" type="password" pPassword />
+
+
+          </div>
+
+
+          <div class="buttons">
+            <p-button routerLink="/" (click)="login()" label="Войти" ></p-button>
+            <button (click)="register()" pButton type="button" label="Регистрация" class="p-button-text"></button>
+          </div>
+        </form>
+
+
+    </p-card>
+  </div>
+
+
+
+</body>
+
+
